@@ -1,0 +1,61 @@
+<!-- <form [formGroup]="formNameGroup">
+    <div class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" required formControlName="userName">
+        <mat-error *ngIf="formNameGroup.controls['name'].hasError('required')">
+                Username is required!
+            </mat-error>
+            <div *ngIf="(formNameGroup.get('name').invalid && formNameGroup.get('name').touched) || formNameGroup.get('name').dirty">
+			<small *ngIf="formNameGroup.get('name').errors?.required" class="text-danger">Name is required</small>
+		</div>            
+      </mat-form-field>
+    </div>
+    <br/>
+    <button mat-raised-button color="primary" matStepperNext>Next</button>
+</form> -->
+<form [formGroup]="formNameGroup" (ngSubmit)="onSubmit()">
+ 
+    <div class="form-group">
+      <label for="name">First Name </label>
+      <input type="text" [class.is-invalid] = "formNameGroup.get('firstname')?.invalid && formNameGroup.get('firstname')?.touched" class="form-control" id="firstname" name="firstname" formControlName="firstname">
+      <div *ngIf="(formNameGroup?.get('firstname')?.invalid && formNameGroup.get('name')?.touched) || formNameGroup.get('firstname')?.dirty">
+          <small *ngIf="formNameGroup?.get('firstname')?.errors?.['required']" class="text-danger">First Name is required</small>
+      </div>
+    </div>
+   
+    
+    <div class="form-group">
+      <label for="lastname">Last Name </label>
+      <input type="text" id="lastname" name="lastname" formControlName="lastname">
+    </div>
+   
+    <div class="form-group">
+        <label for="email">Email </label>
+      <input type="text" id="email" name="email" formControlName="email">
+    </div>
+   
+    <div class="form-group">
+        <label for="gender">Geneder </label>
+      <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+      <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+    </div>
+   
+    <div class="form-group">
+        <label for="isMarried">Married </label>
+      <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+    </div>
+   
+    <div class="form-group">
+        <label for="country">country </label>
+      <select id="country" name="country"  formControlName="country">
+        <option [value]="c.id" *ngFor="let c of countryList">
+          {{c.name}}
+        </option>
+      </select>
+    </div>
+   
+    <div class="form-group">
+        <button type="submit">Submit</button>
+    </div>
+   
+  </form>

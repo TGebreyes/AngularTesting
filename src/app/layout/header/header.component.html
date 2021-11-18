@@ -1,0 +1,32 @@
+<!-- <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div>Header</div>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <a routerLink="/login">Login</a>
+      <a routerLink="/registration">Registration</a>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/users">Users</a>
+      <a routerLink="/account-settings">Account Settings</a>
+    </div>
+  </div> -->
+  
+  <mat-toolbar color="primary" class="toolbar">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>Abs 1.2.3</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/login">Login</a>
+      <a mat-button routerLink="/registration">Registration</a>
+      <a mat-button routerLink="/dashboard">Dashboard</a>
+      <a mat-button routerLink="/users">users</a>
+      <a mat-button routerLink="/account-settings">Account Settings</a>
+    </div>
+
+  </mat-toolbar>
+

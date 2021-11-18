@@ -1,0 +1,21 @@
+// :host ::ng-deep .example-container {
+//     text-align: center;
+//     display: flex;
+//     width:300px;
+// }
+
+.example-container {
+    text-align: center;
+    display: flex;
+    width:300px;
+}
+
+.form-container{
+    margin: 0 px auto; 
+    margin-top: 200 px
+}
+
+.form-field{
+    display: block
+}
+

@@ -1,0 +1,366 @@
+
+<form>
+<div 
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  class="container">
+      <div fxFlex="15%"  class="item item-1">
+        Item 1
+      </div>
+      <div fxFlex="15%" fxFlexOrder="3" class="item item-2">
+        Item 2
+      </div>
+      <div fxFlex="15%" class="item item-3">
+        Item 3
+      </div>
+      <div fxFlex="15%" class="item item-3">
+        Item 3
+      </div>
+      <div fxFlex class="item item-3">
+        Item 3
+      </div>
+</div>
+
+<div fxLayout fxFill
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  class="container">
+        <div  
+        fxFlexOffset="50px"
+        fxFlexOffset.xs="0"
+        class="item item-4">
+          Item 4
+        </div>
+        <div fxFlex="200px" class="item item-5">
+          Item 5
+        </div>
+</div>
+<!-- <div id="flexcontainer">
+  <div class="flexitem one">1</div>
+  <div class="flexitem two">2</div>
+  <div class="flexitem three">3</div>
+  <div class="flexitem four">4</div>
+  <div class="flexitem five">5</div>
+</div> -->
+
+<!-- <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="20px">
+  <div fxLayout="row" fxFill>
+    <mat-toolbar color="primary">
+      <span>Flex layout Example</span>
+    </mat-toolbar>
+  </div>
+  <div fxLayout="row" fxFlex="66%" fxLayoutAlign="center center">
+    <mat-card>
+      <mat-card-header>Sample Card</mat-card-header>
+    </mat-card>
+  </div>
+  </div>  -->
+
+<!-- <div fxFlexFill
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  class="container">
+      <div fxFlex="15%" class="item item-1">
+        Item 1
+      </div>
+      <div fxFlex="20%" fxFlexOrder="3" class="item item-2">
+        Item 2
+      </div>
+      <div fxFlex class="item item-3">
+        Item 3
+      </div>
+</div>
+
+<div fxLayout fxFlexFill  fxFlex
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px"
+  fxLayoutGap.xs="0"
+  class="container">
+        <div fxFlex 
+        fxFlexOffset="50px"
+        fxFlexOffset.xs="0"
+        class="item item-4">
+          Item 4
+        </div>
+        <div fxFlex="200px" class="item item-5">
+          Item 5
+        </div>
+</div>
+ -->
+
+
+<!-- <div fxLayout="column" fxLayoutGap="50px">
+  <div fxLayout="row">
+    <div fxLayoutAlign="center" fxFill class="card">
+      <h1>1</h1>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="25px">
+    <div fxFlex fxLayoutAlign="center" class="card">
+      <h1>2</h1>
+    </div>
+    <div fxFlex fxLayoutAlign="center" class="card">
+      <h1>3</h1>
+    </div>
+    <div fxFlex fxLayoutAlign="center" class="card">
+      <h1>4</h1>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="50px">
+    <div fxLayoutAlign="center" fxFlex class="card">
+      <h1>5</h1>
+    </div>
+    <div fxLayoutAlign="center" fxFlex class="card">
+      <h1>6</h1>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="container-fluid">
+  hello
+</div> -->
+<!-- 
+<mat-vertical-stepper>  
+  <mat-step label="Personal Detail">  
+    <p> Step 1</p>  
+    <button mat-raised-button color="primary" matStepperNext>Next</button>  
+  </mat-step>  
+  <mat-step label="Address">  
+    <p> Step 2</p>  
+    <div>  
+      <button mat-raised-button color="primary" style="margin-right:6px;" matStepperNext>Next</button>  
+      <button mat-raised-button color="primary" matStepperPrevious>Previous</button>  
+    </div>  
+  </mat-step>  
+  <mat-step label="Reviews Details">  
+    <p>Step 3</p>  
+    <button mat-raised-button color="primary" style="margin-right:6px;" matStepperPrevious>Previous</button>  
+    <button mat-raised-button color="primary" (click)="add()" >Save</button>  
+  </mat-step>  
+</mat-vertical-stepper>  
+<form>  
+</form> -->
+<!-- 
+<mat-horizontal-stepper>  
+  <mat-step [stepControl]="ProfileForm">  
+    <form [formGroup]="ProfileForm">  
+      <ng-template matStepLabel></ng-template>  
+      <div>  
+        <div>  
+          <mat-form-field>  
+            <input matInput placeholder="Enter Name" formControlName="EmployeeName">  
+          </mat-form-field>  
+        </div>  
+        <div>  
+          <mat-form-field>  
+            <input matInput placeholder="Enter Age" formControlName="Age">  
+          </mat-form-field>  
+        </div>  
+        <div>  
+          <button mat-raised-button color="primary" style="margin-right:6px;" matStepperNext>Next</button>  
+          <button mat-raised-button color="primary" matStepperPrevious>Previous</button>  
+        </div>  
+      </div>  
+      <button mat-raised-button color="primary" matStepperNext>Next</button>  
+    </form>  
+  </mat-step>  
+  <mat-step label="Address">  
+    <form [formGroup]="PersonalDetailForm">  
+      <ng-template matStepLabel></ng-template>  
+      <div>  
+        <div>  
+          <mat-form-field>  
+            <input matInput placeholder="Enter Address" formControlName="Address">  
+          </mat-form-field>  
+        </div>  
+        <div>  
+          <mat-form-field>  
+            <input matInput placeholder="Enter City" formControlName="City">  
+          </mat-form-field>  
+        </div>  
+        <div>  
+          <button mat-raised-button color="primary" style="margin-right:6px;" matStepperNext>Next</button>  
+          <button mat-raised-button color="primary" matStepperPrevious>Previous</button>  
+        </div>  
+      </div>  
+    </form>  
+  </mat-step>  
+  <mat-step label="Reviews Details">  
+    <p>Step 3</p>  
+    <button mat-raised-button color="primary" style="margin-right:6px;" matStepperPrevious>Previous</button>  
+    <button mat-raised-button color="primary" (click)="add()">Save</button>  
+  </mat-step>  
+</mat-horizontal-stepper>  
+ -->
+
+
+ <!-- <mat-vertical-stepper>
+
+  <mat-step labelPosition="end">
+    <ng-template matStepLabel>
+      <span>
+        <u>Step</u> <i>One</i>
+      </span>
+    </ng-template>
+    Step 1 content
+  </mat-step>
+
+  <mat-step label="Step 2" labelPosition="end">
+    Step 2 content
+  </mat-step>
+
+  <mat-step label="Step 3">
+    You are now done.
+  </mat-step>
+  
+</mat-vertical-stepper> -->
+
+<!-- <mat-horizontal-stepper>
+    
+  <mat-step state="phone" labelPosition="end">
+    <ng-template matStepLabel>
+      <span>
+        <u>Step 1</u> <i>One</i>
+      </span>
+    </ng-template>
+    <p>Put down your phones.</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step label="Step 2" state="chat" completed ="true">
+    <p>Socialize with each other.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step label="Step 3">
+    <p>You're welcome.</p>
+  </mat-step>
+
+  <ng-template matStepperIcon="phone">
+    <mat-icon>call_end</mat-icon>
+  </ng-template>
+
+  <ng-template matStepperIcon="chat">
+    <mat-icon>forum</mat-icon>
+  </ng-template>
+
+</mat-horizontal-stepper> -->
+<!-- [linear]="isLinear" -->
+<h2 align="center"> Material Stepper Example </h2>
+<mat-horizontal-stepper #stepper labelPosition="bottom">
+  <mat-step [stepControl]="formNameGroup" labelPosition="end" state="phone">
+    <ng-template matStepLabel>
+      <span>
+        <u>Contact</u> <i>(Personal)</i>
+      </span>
+    </ng-template>
+
+    <div style="padding-top: 3%;">
+      <app-personal-info [contact]="contact"></app-personal-info>
+      <!-- <form [formGroup]="formNameGroup">
+            <div class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Name" required formControlName="userName">
+                <mat-error *ngIf="formNameGroup.controls['userName'].hasError('required')">
+                        Username is required!
+                    </mat-error>
+              </mat-form-field>
+            </div>
+            <br/>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </form> -->
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="formPasswordGroup" label="Password" state="chat" >
+    <div style="padding-top: 3%;">
+      <app-company-info></app-company-info>
+        <!-- <form [formGroup]="formPasswordGroup">
+            <div class="example-form">
+              <mat-form-field class="example-full-width">
+                <input type="password" matInput placeholder="Password" required formControlName="passWord">
+                <mat-error *ngIf="formPasswordGroup.controls['passWord'].hasError('required')">
+                        Password is required!
+                    </mat-error>
+              </mat-form-field>
+            </div>
+            <br/>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </form> -->
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="formEmailGroup" label="Email" >
+    <div style="padding-top: 3%;">
+      <app-bootsrap-job-info></app-bootsrap-job-info>
+        <!-- <form [formGroup]="formEmailGroup">
+            <div class="example-form">
+              <mat-form-field class="example-full-width">
+                <input type="text" matInput placeholder="Email" required formControlName="emailID">
+                <mat-error *ngIf="formEmailGroup.controls['emailID'].hasError('required')">
+                        Email is required!
+                    </mat-error>
+                <mat-error *ngIf="formEmailGroup.controls['emailID'].hasError('email')">
+                    Email is not Valid!
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <br/>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </form> -->
+    </div>
+  </mat-step>
+
+  <mat-step [stepControl]="formPhoneGroup" label="Mobile" >
+    <div style="padding-top: 3%;">
+      <app-template-form></app-template-form>
+        <!-- <form [formGroup]="formPhoneGroup">
+            <div class="example-form">
+              <mat-form-field class="example-full-width">
+                <input type="tel" matInput placeholder="Mobile" required formControlName="mobile">
+                <mat-error *ngIf="formPhoneGroup.controls['mobile'].hasError('required')">
+                        Mobile is required!
+                    </mat-error>
+                 <mat-error *ngIf="formPhoneGroup.controls['mobile'].hasError('min')">
+                        Mobile No is Wrong!
+                    </mat-error>
+              </mat-form-field>
+            </div>
+            <br/>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </form> -->
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Review</ng-template>
+    <h5>You are now done.</h5>
+    <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button> &nbsp; &nbsp;
+        <button mat-raised-button color="accent" type="submit">Submit</button> &nbsp; &nbsp;
+        <button mat-raised-button color="warn" (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+<ng-template matStepperIcon="phone">
+  <mat-icon>call_end</mat-icon>
+</ng-template>
+
+<ng-template matStepperIcon="chat">
+  <mat-icon>forum</mat-icon>
+</ng-template>
+
+</mat-horizontal-stepper>
+<router-outlet></router-outlet>
+</form>

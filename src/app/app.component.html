@@ -1,0 +1,76 @@
+
+<app-input-slider [(value)]="inputSliderValue"></app-input-slider>
+
+<app-contact-search></app-contact-search>
+<div>
+
+    <h2>Angular Show/Hide Div on Radio Button Click</h2>
+  
+    <label>
+      <input [value]="1" [(ngModel)]="sh" name="sh" type="radio" [checked]="isChecked" /> Adams
+    </label>
+  
+    <label>
+      <input [value]="0" [(ngModel)]="sh" name="sh" type="radio" [checked]="!isChecked" /> Johnas
+    </label>
+  
+    <div class="text-center purple" *ngIf="sh == 1">Adams</div>
+    <div class="text-center red" *ngIf="sh == 0">Johnas</div>
+  
+  </div>
+
+<div class="container mt-5">
+
+    <h2>Whitespace Form Validation in Angular Example</h2>
+  
+    <form [formGroup]="formNameGroup" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+        <label>Enter Name</label>
+        <input matInput type="text" formControlName="userName" [(ngModel)]="userName" class="form-control mb-2">
+        <label>Enter Password</label>
+        <input matInput type="text" formControlName="passWord" [(ngModel)]="password" class="form-control mb-2">
+
+        <mat-form-field>
+           <mat-label>Choose Date Range</mat-label>
+          <div formGroupName="dateRange">
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate formControlName="start" placeholder="Start Date">
+              <input matEndDate formControlName="end" placeholder="End Date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </div>
+      </mat-form-field>
+       <div *ngIf="formNameGroup.get('userName')?.touched && formNameGroup.get('userName')?.invalid" class="alert alert-danger">
+
+        <div *ngIf="formNameGroup.get('userName')?.hasError('required') && formNameGroup.get('userName')?.touched">
+          Name is required
+        </div>
+        <div *ngIf="formNameGroup.get('userName')?.hasError('minlength') && formNameGroup.get('userName')?.touched">
+        length
+        </div>
+        <div *ngIf="formNameGroup.get('userName')?.hasError('noWhiteSpace') && formNameGroup.get('userName')?.touched">
+          space
+        </div>
+      </div> 
+
+        <!-- <div *ngIf="m['userName']?.touched && m['userName']?.invalid" class="alert alert-danger">
+          <div *ngIf="m['userName']?.errors?.['required']">Please provide name</div>
+          <div *ngIf="m['userName']?.errors?.['minlength']">Name must be 4 characters</div>
+          <div *ngIf="m['userName']?.errors?.['noWhiteSpace']">Whitespace is not allowed</div>
+        </div> -->
+         <div *ngIf="m['passWord']?.touched && m['passWord']?.invalid" class="alert alert-danger">
+            <div *ngIf="m['passWord']?.errors?.['required']">Please provide passwordd</div>
+            <div *ngIf="m['passWord']?.errors?.['minlength']">Name must be 4 password</div>
+            <div *ngIf="m['passWord']?.errors?.['noWhiteSpace']">Whitespace is not allowed</div>
+          </div>
+        </div>
+  
+      <div class="d-grid mt-3">
+        <button  mat-raised-button color="primary" type="submit" class="btn btn-dark" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+
+
+<router-outlet></router-outlet>
